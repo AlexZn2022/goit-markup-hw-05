@@ -71,7 +71,6 @@ img {
 }
 
 .container {
-  position: relative;
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
@@ -139,11 +138,12 @@ img {
 }
 
 .nav-list-item {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .current {
   color: var(--secondary-elements-color);
+  position: relative;
 }
 
 .current::before {
@@ -157,7 +157,7 @@ img {
 }
 
 .contacts-link {
-  display: inline-block;
+  display: flex;
   align-items: center;
   font-family: "Roboto";
   font-style: normal;
@@ -289,8 +289,6 @@ img {
   margin-right: 30px;
 }
 
-/*----------ADD----HOMEWORK-4-----------*/
-
 .feature-ikon-container {
   padding: 25px 100px;
   width: 270px;
@@ -332,28 +330,25 @@ img {
   gap: 30px;
 }
 
-.what-we-do-overlay:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 370px;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-}
+.what-we-do-overlay{
+  position: relative;
+  }
 
 .overlay-title {
   position: absolute;
-  bottom: 27px;
-  text-transform: uppercase;
-  width: 156px;
-  height: 16px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   color: var(--header-background-color);
-  margin-left: 107px;
+  background-color: rgba(47, 48, 58, 0.8);
+  
 }
 
 /*------------SECTION-TEAM------------*/
@@ -405,7 +400,6 @@ img {
   padding-bottom: 30px;
 }
 
-/*----------ADD----HOMEWORK-4-----------*/
 
 .social-links-list {
   display: flex;
@@ -426,7 +420,7 @@ img {
   width: 100%;
   border-radius: 50%;
   color: #afb1b8;
-  transition-property: background-color;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -440,8 +434,6 @@ img {
 .social-link-icon {
   fill: currentColor;
 }
-
-/*-----------ADD-HOMEWORK-4-----*/
 
 /*-----------SECTION-CLIENT-----*/
 
@@ -460,7 +452,6 @@ img {
 
 .client-link:hover,
 .client-link:focus {
-  border: 1px solid var(--active-main-color);
   color: var(--active-main-color);
 }
 
@@ -476,7 +467,7 @@ img {
   justify-content: center;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid currentColor;
   border-radius: 4px;
   color: #afb1b8;
   transition-property: color;
@@ -534,7 +525,6 @@ img {
   margin-top: 9px;
 }
 
-/*----------ADD----HOMEWORK-4-----------*/
 
 .footer .container {
   display: flex;
@@ -575,6 +565,7 @@ img {
 }
 
 .portfolio-buttons {
+  display: block;
   background-color: var(--portfolio-buttons-color);
   color: var(--main-title-color);
   border-radius: 4px;
@@ -586,7 +577,7 @@ img {
   letter-spacing: inherit;
   cursor: pointer;
   padding: 6px 22px;
-  transition-property: background-color;
+  transition-property: background-color, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -698,10 +689,12 @@ img {
     background: var(--header-background-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    fill: #000000;
-    cursor: pointer;
+     cursor: pointer;
   }
  
+  .modal-close-icon{
+    fill: #000000;
+  }
 
   .modal{
     position: absolute;
@@ -715,7 +708,6 @@ img {
     border-radius: 4px;
     transition: transform 250ms linear;
   }
-
 
 .is-hidden {
 opacity: 0;
